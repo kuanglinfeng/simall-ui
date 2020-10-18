@@ -23,6 +23,7 @@ const router = createRouter({
       path: '/doc',
       component: Doc,
       children: [
+        {path: '', redirect: '/doc/intro'},
         {
           path: 'intro',
           component: md('intro.md')

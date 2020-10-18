@@ -4,10 +4,15 @@
       <Topnav />
       <div class="banner">
         <h1>Simall UI</h1>
-        <h2>一个面向学习者的简洁小巧的 UI</h2>
+        <h2>一个基于 Vue3 的简洁轻巧的 UI</h2>
         <p class="actions">
-          <a href="https://github.com/kuanglinfeng">Github</a>
-          <router-link to="/doc">开始</router-link>
+          <router-link to="/doc">开始使用</router-link>
+          <a href="https://github.com/kuanglinfeng">
+            <svg>
+              <use xlink:href="#icon-github"></use>
+            </svg>
+            Github
+          </a>
         </p>
       </div>
     </div>
@@ -25,7 +30,7 @@
             <use xlink:href="#icon-ts"></use>
           </svg>
           <h3>基于 TypeScript </h3>
-          <p>源代码采用 TypeScript 书写（非严格检查）</p>
+          <p>源代码采用 TypeScript 书写</p>
         </li>
         <li>
           <svg>
@@ -49,7 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 $green: #02bcb0;
-$border-radius: 4px;
+$border-radius: 20px;
 $color: #007974;
 .topnavAndBanner {
   color: $color;
@@ -59,18 +64,27 @@ $color: #007974;
 
 .features {
   margin: 64px auto;
-  width: 400px;
+  padding: 0 16px;
   @media (min-width: 800px) {
     width: 800px;
+    > ul {
+      > li {
+        width: 50%;
+      }
+    }
   }
   @media (min-width: 1200px) {
     width: 1200px;
+    > ul {
+      > li {
+        width: 33%;
+      }
+    }
   }
   >ul {
     display: flex;
     flex-wrap: wrap;
     > li {
-      width: 400px;
       margin: 16px 0;
       display: grid;
       justify-content: start;
@@ -105,6 +119,8 @@ $color: #007974;
   flex-direction: column;
   > .actions {
     padding: 8px 0;
+    margin-top: 10px;
+    display: flex;
     a {
       border-radius: $border-radius;
       margin: 0 8px;
@@ -112,8 +128,19 @@ $color: #007974;
       background: $green;
       display: inline-block;
       padding: 8px 24px;
+      > svg {
+        width: 1em; height: 1em;
+        margin-right: 4px;
+      }
       &:hover {
         text-decoration: none;
+      }
+      &:last-child {
+        display: flex;
+        align-items: center;
+        background: white;
+        color: $green;
+        border: 1px solid $green;
       }
     }
   }

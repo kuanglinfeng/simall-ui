@@ -64,7 +64,8 @@ $border-color: #d9d9d9;
     padding: 8px 16px;
     border-top: 1px dashed $border-color;
     >pre {
-      line-height: 1.1;
+      line-height: 1.6;
+      font-weight: 400;
       font-family: "Fira Code", "Menlo"," Consolas", "Monaco", 'Courier New', "Courier", "monospace";
       margin: 0;
     }
