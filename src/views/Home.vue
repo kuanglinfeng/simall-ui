@@ -7,7 +7,7 @@
         <h2>一个基于 Vue3 的简洁轻巧的 UI</h2>
         <p class="actions">
           <router-link to="/doc">开始使用</router-link>
-          <a href="https://github.com/kuanglinfeng">
+          <a target="_blank" href="https://github.com/kuanglinfeng">
             <svg>
               <use xlink:href="#icon-github"></use>
             </svg>
@@ -53,7 +53,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$green: #02bcb0;
+@import "../variable.scss";
+
 $border-radius: 20px;
 $color: #007974;
 .topnavAndBanner {
@@ -117,6 +118,9 @@ $color: #007974;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  h2 {
+    padding: 10px 0;
+  }
   > .actions {
     padding: 8px 0;
     margin-top: 10px;
@@ -125,7 +129,7 @@ $color: #007974;
       border-radius: $border-radius;
       margin: 0 8px;
       color: white;
-      background: $green;
+      background: $theme-color;
       display: inline-block;
       padding: 8px 24px;
       > svg {
@@ -139,8 +143,8 @@ $color: #007974;
         display: flex;
         align-items: center;
         background: white;
-        color: $green;
-        border: 1px solid $green;
+        color: $theme-color;
+        border: 1px solid $theme-color;
       }
     }
   }

@@ -11,28 +11,13 @@
         <router-link to="/doc">文档</router-link>
       </li>
     </ul>
-    <span class="toggleAside" @click="toggleMenu"></span>
   </div>
 </template>
-
-<script lang="ts">
-import { Ref, inject } from 'vue'
-
-export default {
-  setup() {
-    const menuVisible = inject<Ref<boolean>>('menuVisible')
-    const toggleMenu = () => {
-      menuVisible.value = !menuVisible.value
-    }
-    return { toggleMenu }
-  }
-}
-</script>
 
 <style lang="scss" scoped>
 .topnav {
   display: flex;
-  padding: 16px;
+  padding: 16px 24px;
   position: fixed;
   top: 0;
   left: 0;
@@ -55,6 +40,9 @@ export default {
     > li {
       display: flex;
       align-items: center;
+      a {
+        text-decoration: none;
+      }
     }
   }
   > .toggleAside {
@@ -67,7 +55,9 @@ export default {
     transform: translateY(-50%);
   }
   @media (max-width: 500px) {
-    > .menu {display: none;}
+    > .menu {
+      display: none;
+    }
     > .logo {margin: 0 auto}
     > .toggleAside {display: inline-block}
   }

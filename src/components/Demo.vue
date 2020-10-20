@@ -17,7 +17,7 @@
 import {computed, ref} from 'vue'
 import Button from '../lib/Button.vue'
 import 'prismjs';
-import 'prismjs/themes/prism.css'
+import 'prismjs/themes/prism-tomorrow.css'
 const Prism = (window as any).Prism
 export default {
   components: {

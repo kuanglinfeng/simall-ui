@@ -74,12 +74,12 @@ export default {
       container,
       current
     }
-  },
+  }
 }
 </script>
-
 <style lang="scss">
-$blue: #40a9ff;
+@import "./simall.scss";
+
 $color: #333;
 $border-color: #d9d9d9;
 .simall-tabs {
@@ -96,13 +96,13 @@ $border-color: #d9d9d9;
         margin-left: 0;
       }
       &.selected {
-        color: $blue;
+        color: $theme-color;
       }
     }
     &-indicator {
       position: absolute;
       height: 3px;
-      background: $blue;
+      background: $theme-color;
       left: 0;
       bottom: -1px;
       width: 100px;

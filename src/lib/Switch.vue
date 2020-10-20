@@ -1,19 +1,30 @@
 <template>
-  <button class="simall-switch" :class="{'simall-checked': value}" @click="toggle">
+  <button
+    class="simall-switch"
+    :class="{'simall-checked': modelValue}"
+    @click="toggle"
+  >
     <span></span>
   </button>
-  <div>{{ value }}</div>
+  <div>{{ modelValue }}</div>
 </template>
 
 <script lang="ts">
 
 export default {
   props: {
-    value: Boolean
+    modelValue: {
+      type: Boolean,
+    },
+    disabled: {
+      type: Boolean,
+    }
   },
   setup(props, context) {
     const toggle = () => {
-      context.emit('input', !props.value)
+      if (!props.disabled) {
+        context.emit('update:modelValue', !props.modelValue)
+      }
     }
     return { toggle }
   }
@@ -21,6 +32,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./simall.scss";
+
 $h: 22px;
 $h2: $h - 4px;
 .simall-switch {
@@ -48,7 +61,7 @@ $h2: $h - 4px;
     > span {width: $h2 + 4px; margin-left: -4px}
   }
   &.simall-checked {
-    background: #1890ff;
+    background: $theme-color;
     > span {
       left: calc(100% - #{$h2} - 2px)
     }

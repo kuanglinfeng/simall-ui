@@ -50,14 +50,15 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./simall.scss";
+
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
-$blue: #40a9ff;
 $radius: 4px;
 $red: red;
 $grey: grey;
-.simall-button {
+button.simall-button {
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
@@ -77,8 +78,8 @@ $grey: grey;
   }
   &:hover,
   &:focus {
-    color: $blue;
-    border-color: $blue;
+    color: $theme-color;
+    border-color: $theme-color;
   }
   &:focus {
     outline: none;
@@ -89,9 +90,9 @@ $grey: grey;
   &.simall-theme-link {
     border-color: transparent;
     box-shadow: none;
-    color: $blue;
+    color: $theme-color;
     &:hover, &:focus {
-      color: lighten($blue, 10%);
+      color: lighten($theme-color, 10%);
     }
   }
   &.simall-theme-text {
@@ -114,13 +115,13 @@ $grey: grey;
   }
   &.simall-theme-button {
     &.simall-level-main {
-      background: $blue;
+      background: $theme-color;
       color: white;
-      border-color: $blue;
+      border-color: $theme-color;
       &:hover,
       &:focus {
-        background: darken($blue, 10%);
-        border-color: darken($blue, 10%);
+        background: darken($theme-color, 10%);
+        border-color: darken($theme-color, 10%);
       }
     }
     &.simall-level-danger {
@@ -145,10 +146,10 @@ $grey: grey;
   }
   &.simall-theme-text {
     &.simall-level-main {
-      color: $blue;
+      color: $theme-color;
       &:hover,
       &:focus {
-        color: darken($blue, 10%);
+        color: darken($theme-color, 10%);
       }
     }
     &.simall-level-danger {
@@ -180,7 +181,7 @@ $grey: grey;
     display: inline-block;
     margin-right: 4px;
     border-radius: 8px;
-    border-color: $blue $blue $blue transparent;
+    border-color: $theme-color $theme-color $theme-color transparent;
     border-style: solid;
     border-width: 2px;
     animation: simall-spin 1s infinite linear;
