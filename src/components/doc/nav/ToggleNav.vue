@@ -27,7 +27,6 @@ export default {
     li {
       text-align: center;
       width: 100%;
-      padding: 4px 0;
       > a {
         display: block;
         padding: 4px 16px;

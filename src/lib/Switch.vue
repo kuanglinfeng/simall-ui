@@ -6,7 +6,6 @@
   >
     <span></span>
   </button>
-  <div>{{ modelValue }}</div>
 </template>
 
 <script lang="ts">

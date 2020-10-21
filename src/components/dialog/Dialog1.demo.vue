@@ -20,6 +20,7 @@
 import Dialog from '../../lib/Dialog.vue'
 import Button from '../../lib/Button.vue'
 import { ref } from 'vue'
+
 export default {
   components: {
     Dialog,
@@ -33,7 +34,8 @@ export default {
     const f1 = () => {
       return false
     }
-    const f2 = () => {}
+    const f2 = () => {
+    }
     return {
       x,
       toggle,

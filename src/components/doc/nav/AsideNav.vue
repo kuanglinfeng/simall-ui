@@ -20,7 +20,7 @@ export default {
   }
   box-shadow: 1px 0 1px 1px rgba(0, 0, 0, .05);
   width: 250px;
-  padding: 70px 0 16px;
+  padding: 61px 0 16px;
   position: fixed;
   top: 0;
   left: 0;

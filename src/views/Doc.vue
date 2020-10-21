@@ -8,7 +8,7 @@
       </div>
       <ToggleNav v-if="menuVisible" />
       <div class="logo">
-        <a href="http://localhost:3000">
+        <a href="https://kuanglinfeng.gitee.io/simall-ui-website/">
           <img class="icon" src="../assets/logo.png" alt="Logo" />
         </a>
         <h1 class="title">Simall - UI</h1>
@@ -101,7 +101,8 @@ export default {
         height: 40px;
       }
       > .title {
-        font-size: 24px;
+        font-weight: 500;
+        font-size: 20px;
         color: $theme-color;
       }
     }

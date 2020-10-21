@@ -1,9 +1,9 @@
 <template>
   <div class="topnav">
     <div class="logo">
-      <router-link to="/">
+      <a href="https://kuanglinfeng.gitee.io/simall-ui-website/">
         <img src="../assets/logo.png" alt="Logo" />
-      </router-link>
+      </a>
     </div>
     <div class="menu"></div>
     <ul class="menu">
@@ -18,9 +18,6 @@
 .topnav {
   display: flex;
   padding: 16px 24px;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 20;
   justify-content: center;

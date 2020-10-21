@@ -7,7 +7,7 @@
         <h2>一个基于 Vue3 的简洁轻巧的 UI</h2>
         <p class="actions">
           <router-link to="/doc">开始使用</router-link>
-          <a target="_blank" href="https://github.com/kuanglinfeng">
+          <a target="_blank" href="https://github.com/kuanglinfeng/simall-ui">
             <svg>
               <use xlink:href="#icon-github"></use>
             </svg>
@@ -22,22 +22,28 @@
           <svg>
             <use xlink:href="#icon-vue"></use>
           </svg>
-          <h3>基于 Vue 3</h3>
-          <p>使用了 Vue 3 Composition API</p>
+          <div class="description">
+            <h3>基于 Vue 3</h3>
+            <p>使用了 Vue 3 Composition API</p>
+          </div>
         </li>
         <li>
           <svg>
             <use xlink:href="#icon-ts"></use>
           </svg>
-          <h3>基于 TypeScript </h3>
-          <p>源代码采用 TypeScript 书写</p>
+          <div class="description">
+            <h3>基于 TypeScript </h3>
+            <p>源代码采用 TypeScript 书写</p>
+          </div>
         </li>
         <li>
           <svg>
             <use xlink:href="#icon-light"></use>
           </svg>
-          <h3>代码易读</h3>
-          <p>每个组件的源代码都极其简洁</p>
+          <div class="description">
+            <h3>代码易读</h3>
+            <p>每个组件的源代码都极其简洁</p>
+          </div>
         </li>
       </ul>
     </div>
@@ -63,49 +69,40 @@ $color: #007974;
   clip-path: ellipse(80% 60% at 50% 40%);
 }
 
-.features {
-  margin: 64px auto;
-  padding: 0 16px;
-  @media (min-width: 800px) {
-    width: 800px;
-    > ul {
-      > li {
-        width: 50%;
-      }
-    }
+div.features {
+  @media (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
   }
-  @media (min-width: 1200px) {
-    width: 1200px;
-    > ul {
-      > li {
-        width: 33%;
-      }
+  width: 100%;
+  padding: 50px 150px;
+  ul {
+    @media (max-width: 800px) {
+      width: 50%;
+      justify-content: center;
     }
-  }
-  >ul {
+    @media (max-width: 560px) {
+      width: 80%;
+    }
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     > li {
       margin: 16px 0;
-      display: grid;
-      justify-content: start;
-      align-content: space-between;
-      grid-template-areas:
-        "icon title"
-        "icon text";
-      grid-template-columns: 80px auto;
-      grid-template-rows: 1fr auto;
+      display: flex;
+      justify-content: space-between;
       > svg {
-        grid-area: icon;
         width: 64px;
         height: 64px;
       }
-      > h3 {
-        grid-area: title;
-        font-size: 28px;
-      }
-      > p {
-        grid-area: text
+      > div.description {
+        > h3 {
+          font-size: 24px;
+        }
+        > p {
+        }
       }
     }
   }
@@ -113,12 +110,13 @@ $color: #007974;
 
 .banner {
   color: $color;
-  padding: 100px 0;
+  padding-bottom: 100px;
+  padding-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  h2 {
+  > h2 {
     padding: 10px 0;
   }
   > .actions {
