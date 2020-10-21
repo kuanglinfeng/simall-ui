@@ -39,7 +39,7 @@ yarn add simall-ui
 
 *** 注意：使用时，请按如下方式引入组件及组件样式 ***
 
-```
+```vue
 // 引入组件
 import { Button, Switch, Tabs, Tab, Dialog, openDialog } from 'simall-ui'
 // 引入样式
@@ -52,7 +52,7 @@ import 'simall-ui/dist/lib/simall-ui.css'
 
 代码示例：
 
-```
+```vue
 <template>
   <div>
     <Button>按钮</Button>
