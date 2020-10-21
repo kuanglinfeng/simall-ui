@@ -12,9 +12,8 @@ Simall UI 是一款基于 Vue 3 和 TypeScript 的 UI 组件库。
 
 组件的样式、色彩的搭配参考了一些成熟的UI框架（如：Ant Design、Element UI）。
 
-目前代码尚未完工，持续更新中。本组件库仅供学习交流，请勿在生产环境中使用。 欢迎讨论交流，如果你觉得还不错，可以给我 [Star](https://github.com/kuanglinfeng/simall-ui)。
+目前代码尚未完工，持续更新中。本组件库仅供学习交流，请勿在生产环境中使用。 欢迎讨论交流，如果你觉得还不错，可以给我 Star。
 
-下一节：[安装](#/doc/install)
 
 ## 安装
 
@@ -33,7 +32,8 @@ yarn add simall-ui
 ```
 
 ## 开始使用
-请先[安装](#/doc/install)本组件库。
+
+请先安装本组件库。
 
 然后在你的代码中写入下面的代码
 
